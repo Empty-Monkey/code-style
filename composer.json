@@ -1,0 +1,27 @@
+{
+    "name": "empty-monkey/code-style",
+    "description": "Code Style settings for Empty Monkey's repositories",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "EmptyMonkey\\CodeStyle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Niklas Lampén",
+            "email": "niklas@emptymonkey.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "8.0.* | 8.1.*",
+        "friendsofphp/php-cs-fixer": "3.2.1"
+    },
+    "scripts": {
+        "style": [
+            "php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.dist.php -v"
+        ]
+    }
+}
