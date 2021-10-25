@@ -37,7 +37,7 @@ return $config;
 
 **3. Make it easy to run**
 
-Add support for your composer to run styling by adding this to your `composer.json`.
+Add support for your composer to run styling by adding this to your `composer.json`. Now you can run the styles to all your files by running `composer style`.
 
 ```json
     "scripts": {
