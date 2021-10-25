@@ -17,9 +17,13 @@
     "minimum-stability": "dev",
     "require": {
         "php": "8.0.* | 8.1.*",
-        "friendsofphp/php-cs-fixer": "3.2.1"
+        "friendsofphp/php-cs-fixer": "3.2.1",
+        "composer/composer": "2.1.x-dev"
     },
     "scripts": {
+        "post-package-install": [
+            "cp vendor/empty-monkey/code-style/.php-cs-fixer.php .php-cs-fixer.dist.sample.php"
+        ],
         "style": [
             "php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.dist.php -v"
         ]

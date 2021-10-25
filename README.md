@@ -13,7 +13,7 @@ This package install [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer
 Create file `.php-cs-fixer.dist.php` to your project's root directory and copy the content from here:
 
 ```php
-$config = require __DIR__ . '/vendor/empty-monkey/code-style/.php-cs-fixer.dist.php;'
+$config = require __DIR__ . '/vendor/empty-monkey/code-style/.php-cs-fixer.dist.php';
 
 return $config;
 ```
