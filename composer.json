@@ -22,7 +22,7 @@
     },
     "scripts": {
         "post-package-install": [
-            "cp vendor/empty-monkey/code-style/.php-cs-fixer.php .php-cs-fixer.dist.sample.php"
+            "cp vendor/empty-monkey/code-style/.php-cs-fixer.dist.php .php-cs-fixer.dist.sample.php"
         ],
         "style": [
             "php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.dist.php -v"
