@@ -6,7 +6,9 @@ $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__)
     ->ignoreDotFiles(false)
     ->name('.php-cs-fixer.dist.php')
-    ->exclude(['vendor'])
+    ->exclude([
+        'vendor',
+    ])
 ;
 
 $ruleSet = new \EmptyMonkey\CodeStyle\PhpCsFixer\RuleSet\EmptyMonkeySet();

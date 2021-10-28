@@ -10,7 +10,7 @@ This package install [PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
 **2. Create config file**
 
-Create file `.php-cs-fixer.dist.php` to your project's root directory and copy the content from here (or download the [file itself](./.php-cs-fixer.dist.php)):
+Create file `.php-cs-fixer.dist.php` to your project's root directory and copy the content from here:
 
 ```php
 <?php
@@ -21,7 +21,11 @@ $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__)
     ->ignoreDotFiles(false)
     ->name('.php-cs-fixer.dist.php')
-    ->exclude(['vendor'])
+    ->exclude([
+        'vendor',
+        'bootstrap/cache',
+        'storage',
+    ])
 ;
 
 $ruleSet = new \EmptyMonkey\CodeStyle\PhpCsFixer\RuleSet\EmptyMonkeySet();
@@ -34,6 +38,8 @@ $config
 
 return $config;
 ```
+
+**Note:** Excluding `bootstrap/cache` and `storage` are very laravel specific excludes. Empty Monkey uses Laravel a lot, but feel free to remove those lines if they don't suit your needs.
 
 **3. Make it easy to run**
 
