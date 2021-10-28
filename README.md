@@ -39,7 +39,7 @@ $config
 return $config;
 ```
 
-**Note:** Excluding `bootstrap/cache` and `storage` are very laravel specific excludes. Empty Monkey uses Laravel a lot, but feel free to remove those lines if they don't suit your needs.
+**Note:** Excluding `bootstrap/cache` and `storage` are very Laravel specific excludes. Empty Monkey uses Laravel a lot, but feel free to remove those lines if they don't suit your needs.
 
 **3. Make it easy to run**
 
