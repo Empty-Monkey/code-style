@@ -17,7 +17,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": "8.0.* | 8.1.*",
-        "friendsofphp/php-cs-fixer": "3.2.1"
+        "friendsofphp/php-cs-fixer": "3.5.0"
     },
     "scripts": {
         "style": [
