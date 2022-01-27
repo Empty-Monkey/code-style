@@ -1,5 +1,7 @@
 <?php
 
+use EmptyMonkey\CodeStyle\PhpCsFixer\RuleSet\EmptyMonkeySet;
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 $finder = PhpCsFixer\Finder::create()
@@ -11,11 +13,15 @@ $finder = PhpCsFixer\Finder::create()
     ])
 ;
 
-$ruleSet = new \EmptyMonkey\CodeStyle\PhpCsFixer\RuleSet\EmptyMonkeySet();
-$config  = new \EmptyMonkey\CodeStyle\PhpCsFixer\Config();
+$config = new \EmptyMonkey\CodeStyle\PhpCsFixer\Config();
 
 $config
-    ->setRules($ruleSet->getRules())
+    ->registerCustomRuleSets([
+        EmptyMonkeySet::NAME => EmptyMonkeySet::class,
+    ])
+    ->setRules([
+        EmptyMonkeySet::NAME => true,
+    ])
     ->setFinder($finder)
 ;
 

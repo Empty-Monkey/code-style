@@ -6,6 +6,18 @@ namespace EmptyMonkey\CodeStyle\PhpCsFixer\RuleSet;
 
 class EmptyMonkeySet extends \PhpCsFixer\RuleSet\AbstractRuleSetDescription
 {
+    public const NAME = '@EmptyMonkey';
+
+    public function getName(): string
+    {
+        return self::NAME;
+    }
+
+    public function isRisky(): bool
+    {
+        return false;
+    }
+
     public function getDescription(): string
     {
         return 'Rule set as used by Empty Monkey development team, highly opinionated.';

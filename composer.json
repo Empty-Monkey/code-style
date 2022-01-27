@@ -14,14 +14,18 @@
             "email": "niklas@emptymonkey.com"
         }
     ],
-    "minimum-stability": "stable",
+    "repositories": [{
+        "type": "vcs",
+        "url": "git@github.com:niklam/PHP-CS-Fixer.git"
+    }],
+    "minimum-stability": "dev",
     "require": {
         "php": "8.0.* | 8.1.*",
-        "friendsofphp/php-cs-fixer": "3.2.1"
+        "friendsofphp/php-cs-fixer": "dev-master"
     },
     "scripts": {
         "style": [
-            "php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.dist.php -v"
+            "PHP_CS_FIXER_IGNORE_ENV=1 php vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --using-cache=no --config=.php-cs-fixer.dist.php -v"
         ]
     }
 }
